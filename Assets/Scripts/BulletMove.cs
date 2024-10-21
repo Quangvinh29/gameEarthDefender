@@ -17,5 +17,10 @@ public class BulletMove : MonoBehaviour
             transform.Translate(Vector2.down * speed * Time.deltaTime);
         }
 
+        if(transform.position.y < -4.8f  || transform.position.y > 4.8f)
+        {
+            Destroy(gameObject);
+        }
+
     }
 }

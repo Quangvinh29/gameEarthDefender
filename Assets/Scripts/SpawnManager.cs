@@ -14,6 +14,7 @@ public class SpawnManager : MonoBehaviour
     private bool SpawnDelay = false;
 
 
+    // update thuc hien nhiem vu spawn
     void Update()
     {
         if (CurrentEnemy < MaxEnemy && SpawnDelay == false)
@@ -23,6 +24,7 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+    // ham spawn ke dich va cooldown
     IEnumerator SpawnEnemy()
     {
         Vector2 SpawnPosition = new Vector2(Random.Range(-2.6f, 2.6f), 4.6f);
@@ -30,6 +32,11 @@ public class SpawnManager : MonoBehaviour
         CurrentEnemy++;
         yield return new WaitForSeconds(2f);
         SpawnDelay = false;
+    }
 
+    // ham thuc hien respawn
+    public void Respawn()
+    {
+        CurrentEnemy--;
     }
 }
