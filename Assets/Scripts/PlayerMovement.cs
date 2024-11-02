@@ -6,12 +6,28 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 3f;
+    private float speed = 5f;
     public float HorizontalInput;
     public float VerticalInput;
 
     [SerializeField]
     private int CurrentLives = 3; //MaxLives = 6;
+
+    [SerializeField]
+    private GameObject Explosion;
+
+    private UIManager HealthUp;
+
+    // g?i tham chieu den UIManager
+    private void Start()
+    {
+        HealthUp = GameObject.Find("Canvas").GetComponent<UIManager>();
+
+        if(HealthUp == null)
+        {
+            Debug.Log("HealthUI is Null!");
+        }
+    }
 
 
     // ham update() thuc thi di chuyen
@@ -36,12 +52,12 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // ham mat mau khi va cham
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "EnemyBullet")
         {
             Destroy(collision.gameObject);
-            Damage(); 
+            Damage();
         }
         else if (collision.gameObject.tag == "Enemy")
         {
@@ -50,14 +66,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //Ham nhan damage
+    //Ham nhan damage va Update thanh mau
     public void Damage()
     {
         CurrentLives--;
 
+        HealthUp.HealthUpdate(CurrentLives);
+
         if (CurrentLives == 0)
         {
             Destroy(gameObject);
+            Instantiate(Explosion, transform.position, Quaternion.identity);
         }
     }
 }

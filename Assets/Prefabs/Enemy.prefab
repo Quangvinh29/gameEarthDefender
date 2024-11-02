@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7950463809825222494}
   - component: {fileID: -7466483673457156799}
   - component: {fileID: 5391014613567198391}
-  - component: {fileID: -8058358252631487288}
-  m_Layer: 0
+  - component: {fileID: 1054610707476372619}
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3951908636740779247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.3, y: 4.1, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3187666412047652618}
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 3c6d6674bfcb5ac498628dff731a28f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,9 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d108194ca98fe654aae9cfdb0aceaf53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyType: []
-  DropRate:
-  - 0.2
+  Explosion: {fileID: 3199151718585052928, guid: 4f3826f5528d6ec4bb667a912573937a, type: 3}
 --- !u!50 &5391014613567198391
 Rigidbody2D:
   serializedVersion: 4
@@ -130,7 +128,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &-8058358252631487288
+--- !u!61 &1054610707476372619
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,21 +157,21 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.024, y: 1.024}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.024, y: 1.024}
   m_EdgeRadius: 0
 --- !u!1 &6975289371608351160
 GameObject:
@@ -219,6 +217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2acfe989c148494e8cf4431039f24bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 2319010898983536909, guid: 233721960c584e74aa1f121983b7a0bc, type: 3}
+  Bullet: {fileID: 5302502249633078036, guid: 233721960c584e74aa1f121983b7a0bc, type: 3}
   PlayerShoot: 0
   EnemyShoot: 0

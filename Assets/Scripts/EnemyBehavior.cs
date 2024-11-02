@@ -7,6 +7,9 @@ using UnityEngine;
 public class EnemyBehavior : MonoBehaviour
 {
 
+    [SerializeField]
+    private GameObject Explosion;
+
     private int speed = 2;
     private SpawnManager Rspawn;
     private Score AScore;
@@ -37,23 +40,18 @@ public class EnemyBehavior : MonoBehaviour
     public void DiChuyen()
     {
         transform.Translate(Vector2.down * speed * Time.deltaTime);
-
-        if (transform.position.y < -4.8f)
-        {
-            Destroy(gameObject);
-            Rspawn.Respawn();
-        }
     }
 
-     // neu nhan sat thuong tu dan thi chet va cong diem
-    private void OnCollisionEnter2D(Collision2D collision)
+    // neu nhan sat thuong tu dan thi chet va cong diem
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(collision.gameObject.tag == "PlayerBullet")
+        if (other.tag == "PlayerBullet")
         {
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
             Destroy(gameObject);
             Rspawn.Respawn();
             AScore.AddScore();
+            Instantiate(Explosion, transform.position, Quaternion.identity);
         }
     }
 

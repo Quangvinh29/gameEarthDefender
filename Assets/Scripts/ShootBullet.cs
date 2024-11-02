@@ -6,6 +6,7 @@ using UnityEngine;
 public class ShootBullet : MonoBehaviour
 {
     public GameObject Bullet;
+
     public bool PlayerShoot = false, EnemyShoot = false;
 
     void Update()
@@ -27,7 +28,8 @@ public class ShootBullet : MonoBehaviour
     IEnumerator PlayerBanDan()
     {
         Instantiate(Bullet, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(1.5f);
+        
+        yield return new WaitForSeconds(0.5f);
         PlayerShoot = false;
     }
 

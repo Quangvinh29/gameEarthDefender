@@ -9,6 +9,10 @@ TagManager:
   - PlayerShootDirection
   - EnemyShootDirection
   - Enemy
+  - Projectile
+  - Bonus
+  - Explosion
+  - Muzzle
   layers:
   - Default
   - TransparentFX
@@ -16,7 +20,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
+  - Ship
   - 
   - 
   - 
@@ -45,4 +49,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ship
+    uniqueID: 3980183427
     locked: 0
