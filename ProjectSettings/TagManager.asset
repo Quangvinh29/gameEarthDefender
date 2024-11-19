@@ -8,11 +8,12 @@ TagManager:
   - EnemyBullet
   - PlayerShootDirection
   - EnemyShootDirection
-  - Enemy
-  - Projectile
   - Bonus
   - Explosion
-  - Muzzle
+  - FastEnemy
+  - ShotDirection
+  - Enemy
+  - DeBoss
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Water
   - UI
   - Ship
-  - 
+  - Power Up
   - 
   - 
   - 
@@ -52,4 +53,7 @@ TagManager:
     locked: 0
   - name: Ship
     uniqueID: 3980183427
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 942599159
     locked: 0

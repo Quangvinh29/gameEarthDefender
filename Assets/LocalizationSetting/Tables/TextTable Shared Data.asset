@@ -1,0 +1,214 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: TextTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: TextTable
+  m_TableCollectionNameGuidString: 1fcb0caa3ea46174a82851b9e7f83d41
+  m_Entries:
+  - m_Id: 150067771383808
+    m_Key: BackB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148470408454144
+    m_Key: ContinueB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 182062496915456
+    m_Key: EarthLifesKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 146369129259008
+    m_Key: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 189127491624960
+    m_Key: FinalScoreT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 146300577554432
+    m_Key: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 186586775199744
+    m_Key: MainMenuB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 188160285122560
+    m_Key: MissionFailedT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 188363385905152
+    m_Key: MoTaThua1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 188634971283456
+    m_Key: MotaThua2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145968065716224
+    m_Key: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 151884810985472
+    m_Key: NextB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144441297117184
+    m_Key: OptionB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148397163323392
+    m_Key: PauseT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 186464242802688
+    m_Key: PlayAgainB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144515045564416
+    m_Key: QuitB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 158736533725184
+    m_Key: ScoreKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 151807501574144
+    m_Key: SkipB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 146133006721024
+    m_Key: SoundEffect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 946523643904
+    m_Key: StartB
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152196800094208
+    m_Key: Tutorial1T1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152559552864256
+    m_Key: Tutorial1T2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153267454910464
+    m_Key: Tutorial2T1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153667423739904
+    m_Key: Tutorial2T2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153803516321792
+    m_Key: Tutorial2T3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 154385115291648
+    m_Key: Tutorial2T5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 151712479617024
+    m_Key: TutorialT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 146460200181760
+    m_Key: Vietnamese
+    m_Metadata:
+      m_Items: []
+  - m_Id: 213422783635456
+    m_Key: 'MoTaThang
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 213664337797120
+    m_Key: ThongBaoThang
+    m_Metadata:
+      m_Items: []
+  - m_Id: 213782487146496
+    m_Key: ThongBaoThua
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1329731953008640
+    m_Key: Tutorial1T3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2053370658725888
+    m_Key: ThongBaoQA1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2053614553309184
+    m_Key: ThongBaoDS1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2053860842840064
+    m_Key: ThongBaoQA2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2053966941954048
+    m_Key: ThongBaoDS2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2054123334967296
+    m_Key: Tutorial3T1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2088727093747712
+    m_Key: Tutorial3T2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2089619129933824
+    m_Key: Tutorial3T3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2090621870579712
+    m_Key: Tutorial4T1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2091228467601408
+    m_Key: Tutorial4T2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2092115512565760
+    m_Key: Tutorial4T3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2092898140332032
+    m_Key: Tutorial5T1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093597616021504
+    m_Key: Tutorial5T2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2094294109560832
+    m_Key: Tutorial5T3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2139647219376128
+    m_Key: BackPP
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 2001374256278011929
+  references:
+    version: 2
+    RefIds:
+    - rid: 2001374256278011929
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1731517180610

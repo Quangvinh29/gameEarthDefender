@@ -1,0 +1,237 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TextTable_en-GB
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-GB
+  m_SharedData: {fileID: 11400000, guid: 1fcb0caa3ea46174a82851b9e7f83d41, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 2001374265048039426
+  m_TableData:
+  - m_Id: 946523643904
+    m_Localized: START
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144441297117184
+    m_Localized: OPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144515045564416
+    m_Localized: QUIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 145968065716224
+    m_Localized: MUSIC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 146133006721024
+    m_Localized: SOUND EFFECT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 146300577554432
+    m_Localized: LANGUAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 146369129259008
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 146460200181760
+    m_Localized: Vietnamese
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148397163323392
+    m_Localized: PAUSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148470408454144
+    m_Localized: CONTINUE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 150067771383808
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 151712479617024
+    m_Localized: TUTORIAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 151807501574144
+    m_Localized: Skip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 151884810985472
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152196800094208
+    m_Localized: Touch and hold the white circle and move it in any direction and
+      the character will move in that direction.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152559552864256
+    m_Localized: Every 1 second, the character will automatically shoot bullets.
+      When destroying an enemy, you will receive some points and have a chance to
+      drop power ups
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153267454910464
+    m_Localized: This is player health bar, if out of health will lose
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153667423739904
+    m_Localized: Below the health bar, shaped like the one above, is the button that
+      pauses the game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153803516321792
+    m_Localized: The score will be displayed on the left side of the screen. When
+      you kill an enemy, the score will increase.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 154385115291648
+    m_Localized: On the right side of the screen is the number of lives on earth.
+      There are a maximum of 3 lives, if the enemy reaches the bottom of the screen,
+      you will lose 1 life, and if you have 0 lives, you will lose
+    m_Metadata:
+      m_Items: []
+  - m_Id: 158736533725184
+    m_Localized: 'TotalScore: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 2001374265048039426
+  - m_Id: 182062496915456
+    m_Localized: 'Earth: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 2001374265048039426
+  - m_Id: 186464242802688
+    m_Localized: PLAY AGAIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 186586775199744
+    m_Localized: MAIN MENU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 188160285122560
+    m_Localized: MISSION FAILED
+    m_Metadata:
+      m_Items:
+      - rid: 2001374265048039426
+  - m_Id: 188363385905152
+    m_Localized: You died while protecting the earth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 188634971283456
+    m_Localized: The earth has been invaded
+    m_Metadata:
+      m_Items: []
+  - m_Id: 189127491624960
+    m_Localized: 'Score: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 2001374265048039426
+  - m_Id: 213422783635456
+    m_Localized: You protected the earth from invasion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 213664337797120
+    m_Localized: MISSION COMPLETED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 213782487146496
+    m_Localized: MISSION FAILED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1329731953008640
+    m_Localized: Try to eat power up to become stronger, defeat all enemies to win
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2053370658725888
+    m_Localized: THE 1ST WAVE WAS DEFEATED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2053614553309184
+    m_Localized: WAVE 2 IS COMING !!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2053860842840064
+    m_Localized: THE 2ND WAVE WAS DEFEATED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2053966941954048
+    m_Localized: FINAL WAVE IS COMING !!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2054123334967296
+    m_Localized: These are enemy bullets, avoid them to avoid losing your health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2088727093747712
+    m_Localized: This is a power up that increases the player's maximum health by
+      1 health, up to 6 health.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2089619129933824
+    m_Localized: This is a power up that receives a shield, the shield will have
+      a certain amount of health to block a corresponding amount of damage for the
+      player until it is disapear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2090621870579712
+    m_Localized: This is a health box power up, when eaten it will restore one health,
+      if full health will add 30 points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2091228467601408
+    m_Localized: This is a power up that gives extra points, it will give random
+      between 10 - 100 points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2092115512565760
+    m_Localized: This is an immortal power up, it will help the player not receive
+      any damage for 15 seconds and after 15 seconds it will no longer be effective
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2092898140332032
+    m_Localized: 'Finally 2 power ups to increase power:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2093597616021504
+    m_Localized: This is a power up that can upgrade bullet damage, up to 3 levels
+      with 2 - 3 - 4, if the level is maxed out it will add 50 points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2094294109560832
+    m_Localized: This is a power up that upgrades shooting ability, allowing players
+      to shoot up to 3 bullets in a row at once. If the level is at maximum, it will
+      add 70 points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2139647219376128
+    m_Localized: BACK
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 2001374265048039426
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 158736533725184
+        - id: 182062496915456
+        - id: 189127491624960
+        - id: 188160285122560
