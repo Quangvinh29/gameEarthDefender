@@ -1,4 +1,4 @@
-
+﻿
 using System.Collections;
 using System.Linq;
 using TMPro;
@@ -45,6 +45,7 @@ public class SpawnManager : MonoBehaviour
     public TMP_Text ThongBaoText;
     public TMP_Text DotSauText;
 
+    // thiet lap cac moc tang do kho bang Ramdom.Range mot cach ngau nhien
     private void Start()
     {
   
@@ -52,6 +53,7 @@ public class SpawnManager : MonoBehaviour
         CheckSpawn = SpawnTier[CurrentTier];
     }
 
+    // update thuc hien spawn ke dich va den mot muc do nhat dinh, spawn boss
     void Update()
     {
         if (CanSpawn == true && isSpawning == false && CurrentEnemy < MaxEnemy)
@@ -68,6 +70,7 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+    // thuc hien spawn ke dich voi thoi gian delay = spawnDelay
     IEnumerator SpawnEnemyWithDelay()
     {
         isSpawning = true; 
@@ -76,7 +79,7 @@ public class SpawnManager : MonoBehaviour
         isSpawning = false; 
     }
 
- 
+    // ham lay vi tri, lay loai spawn va spawn
     public void SpawnEnemy()
     {
         Vector2 SpawnPosition = new Vector2(UnityEngine.Random.Range(-2f, 2f), transform.position.y);
@@ -94,6 +97,7 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+    // ham Respawn goi 1 lan khi mot ke dich chet
     public void Respawn()
     {
         if(CurrentEnemy <= 0)
@@ -107,26 +111,29 @@ public class SpawnManager : MonoBehaviour
         EnemyKill++;
     }
 
+    // ham tang do kho bang cach tang spawnDelay, Max so luong va ty le spawn của cac ke dich kho hon
     private void IncreaseDifficulty(int CurrentTier)
     {
         if(CurrentTier == 1)
         {
             spawnDelay = 2.5f;
             MaxEnemy = 5;
-            SpawnRate[0] += 0.1f;
+            SpawnRate[0] += 0.15f;
             SpawnRate[1] += 0.2f;
             SpawnRate[2] += 0.1f;
         }
         if (CurrentTier == 2)
         {
             spawnDelay = 1.5f;
-            SpawnRate[0] += 0.05f;
-            SpawnRate[1] += 0.1f;
+            MaxEnemy = 6;
+            SpawnRate[0] += 0.1f;
+            SpawnRate[1] += 0.15f;
             SpawnRate[2] += 0.2f;
  
          }
     }
 
+    // ham spawn boss goi mot lan trong update khi dat du dieu kien
     private void SpawnBoss()
     {
         BossSpawned = true;
@@ -137,7 +144,7 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-
+    // ham boss di danh bai goi 1 lan khi boss da chet de hien thi thong bao qua man va tang do kho
     public IEnumerator BossDefended()
     {
 
@@ -200,7 +207,7 @@ public class SpawnManager : MonoBehaviour
     }
 
         
-
+    // ham thuc hien thong bao ap dung localization
     private void UpdateThongBao(string value)
     {
         ThongBaoText.text = value;

@@ -12,6 +12,8 @@ public class PowerUp : MonoBehaviour
     private Score AddScore;
     private PlayerMovement Player;
     private ShootPosition[] UpPowerUp;
+
+    // thuc hien goi cac tham chieu
     private void Start()
     {
         playerCollider = GameObject.Find("Player").GetComponent<BoxCollider2D>();
@@ -30,6 +32,7 @@ public class PowerUp : MonoBehaviour
         }
     }
 
+    // khi mot power up duoc spawn, kiem tra co va cham voi player khong (vi power up la doi tuong 3d)
     void Update()
     {
         Bounds playerBounds = playerCollider.bounds;
@@ -51,6 +54,7 @@ public class PowerUp : MonoBehaviour
         }
     }
 
+    // thuc hien ap dung nang luc theo ten cua power up do
     private void RunPowerUp()
     {
         if(gameObject.name == "ScoreBonus(Clone)")

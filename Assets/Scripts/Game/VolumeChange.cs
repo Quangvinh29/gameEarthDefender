@@ -12,6 +12,7 @@ public class VolumeChange : MonoBehaviour
         DieuChinhVolumeMusic();
     }
 
+    // Ap dung cai dat ve am luong sau khi da dieu chinh am luong trong menu cai dat
     public void DieuChinhVolumeMusic()
     {
         if (PlayerPrefs.HasKey(MusicvolumeKey))

@@ -19,6 +19,8 @@ public class BossOneBehavior : MonoBehaviour
 
     private bool CanDashAttack = false;
     public bool Dead = false;
+
+    // thuc hien goi cac tham chieu can thiet va cai dat mau, cach di chuyen
     void Start()
     {
         ShootDirection = GetComponentInChildren<LargeEnemyShot>();
@@ -33,6 +35,7 @@ public class BossOneBehavior : MonoBehaviour
         StartCoroutine(BatDauDiChuyen());
     }
 
+    // thuc hien di chuyen trai phai, neu CanDashAttack == true va vi tri dung, thuc hien ki nang dash
     void Update()
     {
         if (Mathf.Abs(transform.position.y - PositionY) <= 0.5f)
@@ -49,6 +52,7 @@ public class BossOneBehavior : MonoBehaviour
         } 
     }
 
+    // ham bat dau di chuyen, de vi tri chi dinh moi di chuyen qua lai
     IEnumerator BatDauDiChuyen()
     {
         while (transform.position.y > PositionY)
@@ -59,6 +63,7 @@ public class BossOneBehavior : MonoBehaviour
         CanDashAttack = true;
     }
 
+    // ham di chuyen trai phai, den vi tri cham goc man hinh thi quay lai
     private void DiChuyenQuaLai()
     {
         transform.Translate(EnemyMove * BossOneSpeed * Time.deltaTime);
@@ -75,6 +80,7 @@ public class BossOneBehavior : MonoBehaviour
         }
     }
 
+    // thuc hien ki nang dash sau do lui lai
     IEnumerator DashAttack()
     {
         Vector2 OriginPostion = transform.position;
@@ -84,7 +90,7 @@ public class BossOneBehavior : MonoBehaviour
         ShootDirection.enabled = false;
         while (transform.position.y > TargetPosition.y)
         {
-            transform.Translate(Vector2.down * 4.3f * Time.deltaTime);
+            transform.Translate(Vector2.down * 4.7f * Time.deltaTime);
             yield return null;
         }
 
@@ -101,7 +107,7 @@ public class BossOneBehavior : MonoBehaviour
         CanDashAttack = true;
     }
 
-
+    // ham nhan sat thuong khi trung dan player
     public void GetDamage(int Damage)
     {
         Health -= Damage;
@@ -115,6 +121,7 @@ public class BossOneBehavior : MonoBehaviour
         }
     }
 
+    // va cham voi player se tru 3 mau player
     private void OnTriggerEnter2D(Collider2D cother)
     {
         if(cother.gameObject.CompareTag("Player"))

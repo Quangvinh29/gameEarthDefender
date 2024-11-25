@@ -29,6 +29,7 @@ public class WinAndLose : MonoBehaviour
         AddScore = GameObject.Find("ScoreShow").GetComponent<Score>();
     }
 
+    // thuc hien cho 10 giay, hien thi menu wingame va dat lai kieu thong bao dua tren Localization
     public IEnumerator WinGame()
     {
         yield return new WaitForSeconds(10f);
@@ -43,18 +44,20 @@ public class WinAndLose : MonoBehaviour
         HienThiDiemVaDung();
     }
 
+    // hien thi thong bao voi gia tri hien thi la value
     private void UpdateTextThongBao(string value)
     {
         ThongBao.text = value;
  
     }
 
+    // hien thi mo ta voi gia tri hien thi la value
     private void UpdateTextMoTa(string value)
     {
         Mota.text = value;
     }
 
-
+    // thuc hien cho 3 giay, hien thi menu thua game va dat lai kieu thong bao dua tren Localization
     public IEnumerator PlayerDeathGameOver()
     {
         yield return new WaitForSeconds(3f);
@@ -70,6 +73,7 @@ public class WinAndLose : MonoBehaviour
 
     }
 
+    // hien thi menu thua game ngay lap tuc va dat lai kieu thong bao dua tren Localization
     public void EarthGameOver()
     {
         FinishMenu.SetActive(true);
@@ -84,6 +88,7 @@ public class WinAndLose : MonoBehaviour
 
     }
 
+    // Lay diem so cuoi cung tu ScoreShow va hien thi no theo localization
     private void HienThiDiemVaDung()
     {
         FinalScore = AddScore.FinalScore();
@@ -95,6 +100,7 @@ public class WinAndLose : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    // hien thi diem so voi gia tri hien thi la value
     private void UpdateTextScore(string value)
     {
         HienThiDiem.text = value;

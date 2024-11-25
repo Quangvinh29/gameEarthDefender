@@ -44,6 +44,7 @@ public class ShootPosition : MonoBehaviour
         }
     }
 
+    // player tu dong ban dan
     IEnumerator PlayerBanDan()
     {
         for(int i = 0; i < ShootTier; i++)
@@ -56,6 +57,7 @@ public class ShootPosition : MonoBehaviour
         PlayerShoot = false;
     }
 
+    // ke dic thuong tu dong ban dan
     IEnumerator EnemyBanDan()
     {
         Instantiate(EBullet, transform.position, Quaternion.identity);
@@ -63,6 +65,7 @@ public class ShootPosition : MonoBehaviour
         EnemyShoot = false;
     }
 
+    // nang cap dan cho player
     public void UpBullet()
     {
         if (BulletTier < MaxTier)
@@ -76,6 +79,7 @@ public class ShootPosition : MonoBehaviour
         }
     }
 
+    // nang cap ban dan cho player
     public void UpShoot()
     {
         if (ShootTier < MaxShootTier)
@@ -89,12 +93,14 @@ public class ShootPosition : MonoBehaviour
         }
     }
 
+    // lay kha nang giam ngau nhien
     public float RandomDecreaseUpdate()
     {
-        float RandomDecrease = Random.value < 0.4f ? 3f : 4f;
+        float RandomDecrease = Random.value;
         return RandomDecrease;
     }
 
+    // thuc hien giam nang cap
     public void DecreaseUpdate(float RandomDecrase)
     {
 
@@ -124,6 +130,7 @@ public class ShootPosition : MonoBehaviour
         }
     }
 
+    // tam thoi tat kha nang ban cho player khi qua 1 man
     public IEnumerator DaQuaAi()
     {
         QuaAi = true;

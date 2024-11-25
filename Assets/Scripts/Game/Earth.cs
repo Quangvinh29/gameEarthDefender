@@ -11,26 +11,18 @@ public class Earth : MonoBehaviour
     private UIManager EarthUp;
     private SpawnManager Repspawn;
 
-    public GameObject FinishMenu;
-    public TMP_Text MoTa;
-    public TMP_Text HienThiDiem;
-    private Score Score;
-
     void Start()
     {
-        EarthUp  = GameObject.Find("Canvas").GetComponent<UIManager>();
-        Repspawn = GameObject.Find("Spawn").GetComponent<SpawnManager>();
-        Score = GameObject.Find("ScoreShow").GetComponent<Score>();
-
         EarthUp.EarthLiveUpdate(EarthLives);
     }
 
-    
+    // cho trai dat quay lien tuc theo truc z
     void Update()
     {
         transform.Rotate(0, 0, 1 * Time.deltaTime, Space.World);
     }
 
+    // kiem tra va cham neu la ke dich nhanh se tru mau va boss thien thach se thua luon
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "FastEnemy")

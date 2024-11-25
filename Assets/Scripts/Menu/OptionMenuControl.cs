@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,7 +18,7 @@ public class OptionMenuControl : MonoBehaviour
     private const string Effectvolumekey = "SoundEffectMusicVolume";
     private SoundEffectVolumeChange[] VolumeShoot;
 
-
+    
     public void Start()
     { 
         VolumeC = GameObject.Find("BackGround").GetComponent<VolumeChange>();
@@ -26,6 +27,7 @@ public class OptionMenuControl : MonoBehaviour
         SettingEffectVolume();
     }
 
+    // Su dung PlayerPrefs de dong bo cai dat giua cac menu cai dat
     public void SettingVolume()
     {
         if (PlayerPrefs.HasKey(MusicvolumeKey))
@@ -38,9 +40,11 @@ public class OptionMenuControl : MonoBehaviour
             MusicVolume.value = 1f;
         }
 
+        // thuc hien kiem tra thay doi neu nhu scroll-bar thay doi
         MusicVolume.onValueChanged.AddListener(SetVolume);
     }
 
+    // thiet lap cai dat gia tri moi cho scroll-bar o muc do tuong ung cho am nhac
     public void SetVolume(float value)
     {
         PlayerPrefs.SetFloat(MusicvolumeKey, value);
@@ -52,6 +56,7 @@ public class OptionMenuControl : MonoBehaviour
         }
     }
 
+    //Su dung PlayerPrefs de dong bo cai dat giua cac menu cai dat
     public void SettingEffectVolume()
     {
         if (PlayerPrefs.HasKey(Effectvolumekey))
@@ -67,6 +72,7 @@ public class OptionMenuControl : MonoBehaviour
         SoundEffectVolume.onValueChanged.AddListener(SetEffectVolume);
     }
 
+    // thiet lap cai dat gia tri moi cho scroll-bar o muc do tuong ung cho hieu ung am thanh
     public void SetEffectVolume(float value)
     {
         PlayerPrefs.SetFloat(Effectvolumekey, value);

@@ -11,6 +11,8 @@ public class SoundEffectVolumeChange : MonoBehaviour
     {
         DieuChinhVolumeSoundEffect();
     }
+
+    // Ap dung cai dat ve am luong sau khi da dieu chinh am luong trong menu cai dat
     public void DieuChinhVolumeSoundEffect()
     {
         if (PlayerPrefs.HasKey(Effectvolumekey))

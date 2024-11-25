@@ -19,6 +19,8 @@ public class DropPowerUp : MonoBehaviour
     private float[] SelectDropRate;
     private float ChonArray;
 
+
+    // thuc hien 1 la khi 1 ke dich bi tieu diet de kiem tra co hoi roi ra power up, neu co thuc hien spawn power up
     public void DropPU(float DropChange)
     {
         DropNumber = Random.value;

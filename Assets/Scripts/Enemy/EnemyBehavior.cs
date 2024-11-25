@@ -22,7 +22,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private float MoveRate = 0.75f, MoveTypeNumber;
 
-
+    // goi cac tham chieu can thiet va thiet lap di chhuyen
     void Start()
     {
         Rspawn = GameObject.Find("Spawn").GetComponent<SpawnManager>();
@@ -119,7 +119,7 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
-    // neu nhan sat thuong tu dan thi chet va cong diem
+    // neu dam vao player thi chet va cong diem
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")
@@ -130,6 +130,7 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
+    // ham tru mau khi an dan player
     public void TakeDamage(int Damage)
     {
         EnemyHealth -= Damage;
@@ -140,6 +141,7 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
+    // ham chet se pha huy va cong diem
     private void Dead()
     {
         Destroy(gameObject);

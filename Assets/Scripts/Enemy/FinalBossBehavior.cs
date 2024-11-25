@@ -60,13 +60,14 @@ public class FinalBossBehavior : MonoBehaviour
             DiChuyenQuaLai();
         }
 
+        // kiem tra dieu kien neu co the dung ki nang, thuc hien chon ki nang
         if (CanUseSkill == true)
         {
             ChonSkill();
 
         }
 
-
+        // kiem tra dieu kien neu CanBanTenLua == true, kien tra vi tri co the va dan ten lua.
         if (CanBanTenLua == true)
         {
             if (Mathf.Abs(playerPosition.position.x - transform.position.x) < 1f)
@@ -105,6 +106,7 @@ public class FinalBossBehavior : MonoBehaviour
         }
     }
 
+    // ham use skill, goi 1 lan khi di chuyen xong de thuc hien vong lap dung ki nang
     IEnumerator UseSkill()
     {
         while (Dead == false)
@@ -119,6 +121,7 @@ public class FinalBossBehavior : MonoBehaviour
         }
     }
 
+    // thuc hien chon ki nang neu dieu kien CanUseSkill = true va thuc hien chon ki nang se dung
     private void ChonSkill()
     {
         SkillRateNumber = UnityEngine.Random.value;
@@ -134,6 +137,7 @@ public class FinalBossBehavior : MonoBehaviour
         }
     }
 
+    // kiem tra loai ki nang se phat dong
     private void PhatDongKyNang(int Skill)
     {
         if (Skill == 0)
@@ -155,6 +159,7 @@ public class FinalBossBehavior : MonoBehaviour
         CanUseSkill = false;
     }
 
+    // ham thuc hien ki nang ban ten lua
     IEnumerator BanTenLua()
     {
         Shoot.enabled = false;
@@ -176,6 +181,7 @@ public class FinalBossBehavior : MonoBehaviour
         SkillRecoverYet[0] = true;
     }
 
+    // thuc hien ki nang kich hoat shield
     IEnumerator ActiveShield()
     {
         SkillRecoverYet[1] = false;
@@ -191,6 +197,7 @@ public class FinalBossBehavior : MonoBehaviour
         }
     }
 
+    // thuc hien ki nang spawn deBoss
     IEnumerator SpawnDeBoss()
     {
         SkillRecoverYet[2] = false;
@@ -207,11 +214,13 @@ public class FinalBossBehavior : MonoBehaviour
         SkillRecoverYet[2] = true;
     }
 
+    // kiem tra DeBoss neu chet se spawn moi
     public void DeBossDead()
     {
         CurrentDeBoss--;
     }
 
+    // kiem tra nhan sat thuong, khi chet se thuc hien tieu diet tat ca ke dich va win game.
     public void GetDamage(int Damage)
     {
         if (OnShield == false)

@@ -62,10 +62,10 @@ public class PlayerMovement : MonoBehaviour
     // ham update() thuc thi di chuyen
     void Update()
     { 
-
          DiChuyen();
     }
 
+    // ham Bat dau di chuyen, den vi tri chi dinh thi moi goi kha nang ban de bat dau tu dong ban
     IEnumerator BatDauDiChuyen()
     {
         while(transform.position.y < -2.5f)
@@ -84,10 +84,9 @@ public class PlayerMovement : MonoBehaviour
         DiChuyenXong = true;
     }
 
-    // ham tinh toan chuyen dong 
+    // ham tinh toan di chuyen
     public void DiChuyen()
     {
-        // Di chuyen bang nut bam
         Vector2 VectorDiChuyen = new Vector2(joystick.Horizontal, joystick.Vertical);
         transform.Translate(VectorDiChuyen * 3.5f * Time.deltaTime);
 
@@ -97,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // kiem tra va cham voi dan cua ke dich nhan sat thuong
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("EnemyBullet"))
@@ -106,6 +106,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // ham damage tinh toan luong sat thuong nhan vao cho moi nguon
     public void Damage(int TakeDamage)
     {
         
@@ -145,6 +146,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // ham thuc hien tru mau tren UI va giam mot nang cap ngau nhien
     public void TruMau()
     {
         NhanSatThuong = true;
@@ -159,14 +161,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
+    // sau khi bi tru mau se mien nhiem 1 giay
     IEnumerator TranhSatThuong()
     {
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(1f);
         NhanSatThuong = false;
     }
     
-
+    // khi player bi tieu diet, tat kha nang ban dan, tang hinh player va goi thua game theo player chet
     public void Dead()
     {
         Gun.SetActive(false);   
@@ -176,6 +178,7 @@ public class PlayerMovement : MonoBehaviour
         Instantiate(Explosion, transform.position, Quaternion.identity);
     }
 
+    // ham duoc goi khi nhan power up nhan shield, kich hoat shield
     public void ShieldOn()
     {
         HaveShield = true;
@@ -183,6 +186,7 @@ public class PlayerMovement : MonoBehaviour
         shieldHealth = Random.Range(3, 6);
     }
 
+    // ham duoc goi khi nhan power up bat tu trong 15 giay, thay doi mau sac de hien thi 
     public IEnumerator PowerUpUnDead()
     {
         UnDeadOn = true;
@@ -196,6 +200,7 @@ public class PlayerMovement : MonoBehaviour
         UnDeadOn = false;
     }
 
+    // ham duoc goi khi nhan power up hoi mau, hoi 1 mau va neu da day mau, cong 30 diem
     public void HoiMau()
     {
         if(CurrentLives < MaxCurrentLives)
@@ -209,7 +214,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
+    // ham duoc goi khi nhan power up tang 1 mau toi da, tang 1 mau toi da va neu da day mau, thuc hien hoi mau
     public void AddLives()
     {
         if(MaxCurrentLives < MaxLives)

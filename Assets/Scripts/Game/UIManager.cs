@@ -6,6 +6,7 @@ using TMPro;
 using System.Runtime.CompilerServices;
 using System;
 using UnityEngine.Localization;
+using NUnit.Framework;
 public class UIManager : MonoBehaviour
 {
     public Image[] HealthUI;
@@ -27,6 +28,8 @@ public class UIManager : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<PlayerMovement>();
 
     }
+
+    // ham tang hinh 1 cuc mau khi bi tru mau
     public void HealthUpdate (int CurrentHealth)
     {
         Health = HealthUI[CurrentHealth - 1].GetComponent<Image>();
@@ -37,6 +40,7 @@ public class UIManager : MonoBehaviour
 
     }
 
+    // ham xoa tang hinh 1 cuc mau khi hoi mau
     public void PowerUpGetHealth(int CurrentHealth) 
     {
         if(CurrentHealth -1 >= 0)
@@ -48,13 +52,13 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    //ham them 1 mau toi da, sau do tinh toan lai vi trí hien thi cua thanh mau
     public void AddHealth(int CurrentHealth, int MaxCurrentHealth)
     {
         RectTransform Health = GameObject.Find("Health 1").GetComponent<RectTransform>();
         RectTransform HealthBar = GameObject.Find("HealthBar").GetComponent<RectTransform>();
-        int Healthdistance = 0;
 
-        Healthdistance += 10;
+        int Healthdistance = 10;
         float Width = Health.rect.width;
         float totalWidth = (Width * MaxCurrentHealth) + Healthdistance;
 
@@ -65,6 +69,7 @@ public class UIManager : MonoBehaviour
         HealthCountAfterAddHealth(CurrentHealth, MaxCurrentHealth);
     }
 
+    // ham tuy chinh mau se nhu the nao sau khi them 1 mau toi da neu dang day mau va dang it mau
     private void HealthCountAfterAddHealth(int CurrentHealth, int MaxCurrentHealth)
     {
         if( CurrentHealth  == MaxCurrentHealth)
@@ -87,9 +92,8 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // goi khi bat dau chay de tao luu tru du lieu diem theo local
-    // nhu da tao la score {0} 
-    // sau đo, dang ki su kien va thuc hien LocalizedStringScore.StringChanged lan dau de hien thi lan dau tien
+    // goi khi bat dau chay de tao luu tru du lieu diem theo localization sau moi lan choi lai  = 0
+    // sau đo, dang ki su kien va thuc hien LocalizedStringScore.StringChanged lang nghe su thay doi trong chuoi de thuc hien UpdateText
     private void OnEnable()
     {
         LocalizedStringScore.Arguments = new object[] { score };
@@ -110,7 +114,7 @@ public class UIManager : MonoBehaviour
         EarthUI.text = value;
     }
 
-    // tang diem khi giet ke dich va RefreshString() de goi lai LocalizedStringScore.StringChanged += UpdateText;
+    // tang diem khi giet ke dich va RefreshString() lam moi chuoi de goi lai LocalizedStringScore.StringChanged += UpdateText;
     public void ScoreUpdate(int score)
     {
         LocalizedStringScore.Arguments[0] = score;
